@@ -120,7 +120,7 @@
 		global $conn;
 		$booking_id = $_POST['id'];
 		$sql = "UPDATE booking SET status='confirmed'";
-        $sql .= ", booking_id = '$booking_id'";
+        $sql .= "WHERE booking_id = '$booking_id'";
 	 
         if (mysqli_query($conn, $sql)) {
            	echo json_encode(array(
